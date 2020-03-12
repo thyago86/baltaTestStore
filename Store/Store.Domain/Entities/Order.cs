@@ -34,7 +34,7 @@ namespace Store.Domain.Entities
         {
 
             var item = new OrderItem(product, quantity);
-            if(item.Valid)
+            if (item.Valid)
                 Items.Add(item);
         }
 
@@ -54,6 +54,11 @@ namespace Store.Domain.Entities
         {
             if (amount == Total())
                 this.Status = EOrderStatus.WaitingDelivery;
+        }
+
+        public void Cancel()
+        {
+            Status = EOrderStatus.Canceled;
         }
     }
 }
