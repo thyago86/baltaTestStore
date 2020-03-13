@@ -1,3 +1,5 @@
+
+
 namespace Store.Domain.Entities
 {
     public class Customer : Entity
@@ -6,6 +8,7 @@ namespace Store.Domain.Entities
         {
             Name = name;
             Email = email;
+            
         }
 
         public string Name { get; private set; }
